@@ -1,0 +1,567 @@
+/* Основной файл стилей */
+
+
+@font-face {
+    font-family: "Scada";
+    /* src: url('../fonts/Scada-Regular.woff') format("woff"); */
+    src: url('../fonts/Scada-Regular.ttf' ) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Scada";
+    src: url('../fonts/Scada-Bold.ttf' ) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+* {
+    /* font-size: 16px;  */
+
+    font-family: "Scada", arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    line-height:1.3;
+}
+
+html, body {
+    font-size: 16px;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+
+
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    font-size:1.1rem;   /* основной размер ссылок на наших страницах */
+    text-decoration: none;
+
+    color: #004080;
+}
+    a:hover {
+        text-decoration:underline;
+    }
+
+
+a.marked { font-weight:bold; }
+
+
+
+a.secondary {
+    color:#007dfb;
+}
+
+a.secondary2 {
+    color:#008040;
+}
+
+
+
+.page {
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    overflow:hidden;
+}
+
+
+
+
+.main-menu {
+    z-index:100;
+    position:absolute;
+    top:0; right:0; left:0;
+    height:50px;
+    overflow:hidden;
+
+    box-shadow:0 0 5px rgba(0,0,0,.5);
+    background:#004080;
+}
+
+.main-menu a {
+    display:inline-block;
+    line-height:50px;
+    white-space:nowrap;
+    font-size:0.96rem;
+
+    /* color:#A5B0D4; */
+    color:#eff1f8;
+}
+    .main-menu a:hover {
+        text-decoration:none;
+
+        /* color:#d3daeb; */
+        color: white;
+
+        transition: color 0.3s;
+    }
+
+.main-menu a.marked {
+
+    color:#FFF;
+}
+
+
+
+
+.main-content {
+    position:absolute;
+    top:50px;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow-y:scroll;
+
+    background:#FFF;
+}
+
+
+
+
+.main-footer  {
+    padding:20px 0;
+
+    background:#DDD;
+}
+
+.main-footer a {
+    display:inline-block;
+    font-size: 0.96rem;
+    margin:3px 0;
+}
+
+.main-footer .title {
+    font-size:1.3rem;
+    margin-bottom:20px;
+
+    color:#333;
+}
+
+.main-footer .address {
+    font-size:0.9rem;
+    /* margin-bottom:20px; */
+
+    color:#777;
+}
+
+.main-footer .tools {
+    display: none;   /* !!! */
+
+    font-size:0.9rem;
+
+    color:black;
+}
+
+    .main-footer .tools a {
+        font-size:0.9rem;
+        margin-right:15px;
+    }
+
+.main-footer .group {
+    display:inline-block;
+    vertical-align:top;
+    margin:0 30px 20px 0;
+}
+
+
+
+
+.description {
+    font-size:0.8rem;
+
+    color:#777;
+}
+
+
+/*
+    div.link {
+        padding-bottom:10px;
+    }
+
+    .path {
+        margin-bottom:20px;
+    }
+
+    .path, .path a {
+        font-size: 0.9rem;
+
+        color:#555;
+    }
+*/
+
+
+.subtitle {
+    font-size:1.4rem;
+    margin-bottom:20px;
+
+}
+
+.subtitle2 {
+    font-size:1.4rem;
+    margin-bottom:20px;
+    color:#555;
+}
+
+.subtitle3 {
+    font-size:1.2rem;
+    margin-bottom:15px;
+    color:#000;
+}
+
+.subtitle4 {
+    font-size:1.1rem;
+    margin-bottom:15px;
+    text-transform: uppercase;
+    font-weight:bold;
+    color:#777;
+}
+a.subtitle {
+    color:#333;
+}
+
+
+/*
+li {
+    position:relative;
+    list-style-type: none;
+    -list-style-image:url(i/marker.png);
+    padding-left:20px;
+    padding-bottom:20px;
+}
+
+li:before {
+    content:"⦁";
+    -content: "\25ba";
+    position:absolute;
+    top:0;
+    left:0;
+}
+*/
+
+.info-title {
+    text-transform:uppercase;
+    color:#777;
+    -font-weight:bold;
+    -font-size:0.9rem;
+    font-size:1.2rem;
+    margin-bottom:15px;
+}
+
+.info { font-size:0.95rem; color:#555; text-transform:none; font-weight:normal; }
+
+p, .pg { margin-bottom:10px; text-align:justify; font-size:1.1rem; }
+
+
+.pre-title {
+    color:#333;
+}
+
+.main-title {
+    font-size:1.5rem;
+    padding-top:30px;
+    padding-bottom:20px;
+    border-bottom:1px solid #CCC;
+
+    color: #0080c0;
+}
+
+.page-title {
+    text-transform:uppercase;
+    margin-top:30px;
+    margin-bottom:30px;
+    font-size:1.5rem;
+}
+
+
+.main-page-menu {
+    text-align   :right;
+    /* border-top   :1px solid #CCC; */
+    border-bottom:1px solid #CCC;
+}
+
+.main-page-menu a {
+    display:inline-block;
+    padding:8px 0;
+}
+
+
+.navigation {
+    display: none;
+    position: fixed;
+    z-index:200;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    background: rgba(0,0,0,.3);
+}
+
+.navigation-content {
+    position:absolute;
+    top:0;
+    /* left:0; */
+    right:0;
+    bottom:0;
+    padding: 30px 40px;
+    min-width:40%;
+
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+    background: #555;
+}
+
+
+.settings {
+    display: none;
+    position: fixed;
+    z-index:200;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    background: rgba(0,0,0,.3);
+}
+
+.settings-content {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    padding: 30px 40px;
+    min-width:40%;
+
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+    background: #EEE;
+}
+
+.print { display: none; }
+
+
+@media screen and (max-width:1300px) {
+    .navigation-content, .settings-content {
+        min-width:60%;
+    }
+}
+@media screen and (max-width:800px) {
+    .navigation-content, .settings-content {
+        min-width:95%;
+    }
+}
+
+
+
+
+.separator {
+    width:100%;
+    height:1px;
+    margin:20px 0;
+
+    border-top:1px solid #999;
+}
+
+
+
+.show {
+    display: block;
+    /* animation: anim-show 0.5s; */
+}
+
+/*
+@keyframes anim-show {
+    0%   { right:-300px; -opacity:0; },
+    100% { right:0; -opacity:1; }
+}
+*/
+
+
+/**/
+a.test-01:hover {
+    text-decoration:none;
+    color:#0A3FB4;
+    font-size: 1.1rem;
+
+    transition:
+        color 1.4s cubic-bezier(.23,1,.32,1),
+        font-size 1s linear 0.4s;
+}
+/**/
+
+
+
+/**/
+@-o-keyframes move-01 {
+    0%   { left:0; }
+    50%  { left:100px; }
+    100% { left:0; }
+}
+
+@-moz-keyframes move-01 {
+    0%   { left:0; }
+    50%  { left:100px; }
+    100% { left:0; }
+}
+
+@-webkit-keyframes move-01 {
+    0%   { left:0; }
+    50%  { left:100px; }
+    100% { left:0; }
+}
+
+@keyframes move-01 {
+    0%   { left:0; }
+    50%  { left:100px; }
+    100% { left:0; }
+}
+
+.my-test-01 {
+    display:inline-block;
+    position:absolute;
+
+    animation: move-01 4s infinite;
+}
+/**/
+
+ul {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+ul li {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    display:block;
+}
+
+
+ul.standart li {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    display: list-item;
+    font-size:1.1rem;
+}
+
+
+
+
+ul.p {
+    padding-left:20px;
+    margin-left:0;
+    list-style-type: disc;
+}
+
+ul.p li {
+    font-size:1.1rem;
+    list-style-type: disc;
+    margin-bottom:5px;
+    display:list-item;
+    text-align:justify;
+}
+
+
+
+ul.center    { text-align:center; }
+ul.center li { display:inline-block; margin:0 20px; }
+
+ul.left      { text-align:left; }
+ul.left li   { display:inline-block; margin-right:20px; }
+
+ul.right     { text-align:right; }
+ul.right li  { display:inline-block; margin-left:20px; }
+
+ul.li-spacing li { margin-top:8px; margin-bottom:10px; }
+
+
+/* для кнопки "Действия" в основном меню */
+a.special {
+    padding:0 10px;
+    background:#000;
+    color:#EEE;
+}
+    a.special:hover {
+        color:#FFF;
+    }
+
+a.special2 {
+    padding:0 10px;
+    background:#024d97;
+    color:#EEE;
+}
+    a.special2:hover {
+        color:#FFF;
+    }
+
+
+/* Альтернативное выделение ссылок при наведении
+
+Используется для заголовков (например, новости, основные события)
+*/
+a.hover2:hover {
+    /*
+    -transition: color 1.4s cubic-bezier(.23,1,.32,1);
+    -color:#0A3FB4;
+    -transition: color 1.0s;
+    */
+    transition: color .5s;
+    color:#007dfb;
+    text-decoration:none;
+}
+
+
+
+.toogle-block {
+    animation: toogle-block 1s;
+}
+
+@keyframes toogle-block {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+
+
+.field {
+    margin: 20px 40px 30px 0;
+}
+
+.field label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.field > div {
+    font-size:1.2rem;
+}
+
+
+
+@media print {
+    html, body { position:static; width:auto; height: auto; }
+    .navigation, .settings, .main-menu, .main-page-menu, .main-footer { display: none !important; }
+    .page { position: static; top: auto; left: auto; right: auto; bottom: auto; }
+    .main-menu { position:static; top: auto; left: auto; right: auto; bottom: auto; height: auto; }
+    .main-content { position: static; top: auto; left: auto; right: auto; bottom: auto; overflow: auto; }
+    .print { display:block !important; }
+    .news-title { margin-top:0 !important; }
+
+
+    #id-screen, .pal-window { position:static !important; width:auto !important; height:auto !important; }
+}
+
+
+
+
+
+
